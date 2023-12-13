@@ -21,10 +21,10 @@ labels:
 spec:
   containers:
   - name: todo   
-image: htrvolker/todo-app:sqlite   
-env:
-- name: SECRET_KEY     # The app is designed to get the secret key       
-valueFrom:                  # from an environment variable       
-  secretKeyRef:         
-    name: credentials       # Referencing the Secret's name         
-    key: secret-key         # Referencing the key/value pair under the Secret's stringData property
+  image: htrvolker/todo-app:sqlite   
+  env:
+  - name: SECRET_KEY     # The app is designed to get the secret key       
+    valueFrom:                  # from an environment variable       
+      secretKeyRef:         
+      name: credentials       # Referencing the Secret's name         
+      key: secret-key         # Referencing the key/value pair under the Secret's stringData property

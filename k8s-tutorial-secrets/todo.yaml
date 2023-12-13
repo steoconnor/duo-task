@@ -16,7 +16,8 @@ apiVersion: v1
 kind: Pod
 metadata: 
 name: todo
-  labels:    app: todo
+  labels: 
+    app: todo
 spec:  containers:
   - name: todo   
 image: htrvolker/todo-app:sqlite   

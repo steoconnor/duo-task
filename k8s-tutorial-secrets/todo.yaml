@@ -18,10 +18,11 @@ metadata:
 name: todo
 labels:
   app: todo
-spec:  containers:
+spec:
+  containers:
   - name: todo   
 image: htrvolker/todo-app:sqlite   
-env:   
+env:
 - name: SECRET_KEY     # The app is designed to get the secret key       
 valueFrom:                  # from an environment variable       
   secretKeyRef:         
